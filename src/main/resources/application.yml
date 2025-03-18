@@ -1,0 +1,29 @@
+server:
+  port: 8100  # daily-bot 服务端口
+
+deepseek:
+  api-key: sk-6776dfbbe94b43f4ac14d4b940e37411  # 你的 DeepSeek API Key
+
+qqbot:
+  api-url: http://127.0.0.1:5800/send_group_msg  # 更新为 go-cqhttp 的新端口
+  access-token: Tcsj2134sa  # 与 go-cqhttp 配置一致
+
+xxl:
+  job:
+    admin:
+      addresses: http://123.57.248.153:8099/xxl-job-admin  # 你的服务器上的 xxl-job-admin
+    accessToken: 1893jsadd123
+    executor:
+      appname: daily-bot
+      port: 9999  # xxl-job 执行器端口
+      logpath: D:/daily-bot/logs  # 日志路径（Windows 格式）
+      logretentiondays: 30
+
+spring:
+  main:
+    web-application-type: servlet
+
+logging:
+  level:
+    root: INFO
+    com.dailybot: DEBUG  # 调试日志

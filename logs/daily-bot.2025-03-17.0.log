@@ -1,0 +1,1145 @@
+2025-03-17 11:22:35.091 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 17952 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-17 11:22:35.092 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-17 11:22:35.093 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-17 11:22:35.715 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.dailybot]' package. Please check your configuration.
+2025-03-17 11:22:36.025 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8099"]
+2025-03-17 11:22:36.026 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-17 11:22:36.027 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-17 11:22:36.079 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-17 11:22:36.087 [main] ERROR o.s.b.w.e.tomcat.TomcatStarter - Error starting Tomcat context. Exception: org.springframework.beans.factory.BeanCreationException. Message: Error creating bean with name 'formContentFilter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception with message: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+2025-03-17 11:22:36.111 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-03-17 11:22:36.118 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2025-03-17 11:22:36.136 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:170)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.dailybot.DailyBotApplication.main(DailyBotApplication.java:10)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:520)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:222)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:193)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167)
+	... 8 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'formContentFilter' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception with message: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:489)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1361)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1191)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:346)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:271)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:245)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4467)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128)
+	... 13 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.web.servlet.filter.OrderedFormContentFilter]: Factory method 'formContentFilter' threw exception with message: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:199)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 54 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/fasterxml/jackson/databind/cfg/DatatypeFeature
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.configureFeature(Jackson2ObjectMapperBuilder.java:843)
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.customizeDefaultFeatures(Jackson2ObjectMapperBuilder.java:810)
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.configure(Jackson2ObjectMapperBuilder.java:780)
+	at org.springframework.http.converter.json.Jackson2ObjectMapperBuilder.build(Jackson2ObjectMapperBuilder.java:702)
+	at org.springframework.http.converter.json.MappingJackson2HttpMessageConverter.<init>(MappingJackson2HttpMessageConverter.java:63)
+	at org.springframework.http.converter.support.AllEncompassingFormHttpMessageConverter.<init>(AllEncompassingFormHttpMessageConverter.java:94)
+	at org.springframework.web.filter.FormContentFilter.<init>(FormContentFilter.java:61)
+	at org.springframework.boot.web.servlet.filter.OrderedFormContentFilter.<init>(OrderedFormContentFilter.java:29)
+	at org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration.formContentFilter(WebMvcAutoConfiguration.java:175)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171)
+	... 57 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.fasterxml.jackson.databind.cfg.DatatypeFeature
+	... 71 common frames omitted
+2025-03-17 11:43:14.562 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 31928 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-17 11:43:14.563 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-17 11:43:14.564 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-17 11:43:15.069 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.dailybot]' package. Please check your configuration.
+2025-03-17 11:43:15.288 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8099"]
+2025-03-17 11:43:15.289 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-17 11:43:15.289 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-17 11:43:15.332 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-17 11:43:15.389 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'qqBotService': Injection of autowired dependencies failed
+2025-03-17 11:43:15.392 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-03-17 11:43:15.413 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'qqBotService': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:515)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1445)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:346)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1155)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1121)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1056)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.dailybot.DailyBotApplication.main(DailyBotApplication.java:10)
+Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'qqbot.api.url' in value "${qqbot.api.url}"
+	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81)
+	at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:423)
+	at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:128)
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:118)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:114)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:255)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:226)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:201)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:971)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1552)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	... 19 common frames omitted
+2025-03-17 11:49:29.853 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 16196 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-17 11:49:29.854 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-17 11:49:29.854 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-17 11:49:30.326 [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.dailybot]' package. Please check your configuration.
+2025-03-17 11:49:30.550 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8099"]
+2025-03-17 11:49:30.551 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-17 11:49:30.551 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-17 11:49:30.598 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-17 11:49:30.829 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2025-03-17 11:49:30.832 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-03-17 11:49:30.853 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2025-03-17 14:07:25.933 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 15844 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-17 14:07:25.934 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-17 14:07:25.935 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-17 14:07:26.786 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8099"]
+2025-03-17 14:07:26.787 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-17 14:07:26.787 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-17 14:07:26.844 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-17 14:07:27.222 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@6459f4ea[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-17 14:07:27.265 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8099"]
+2025-03-17 14:07:27.294 [main] INFO  com.dailybot.DailyBotApplication - Started DailyBotApplication in 1.809 seconds (process running for 2.51)
+2025-03-17 14:07:27.785 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2025-03-17 14:07:27.843 [http-nio-8099-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-17 14:07:27.901 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:07:57.918 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:08:27.926 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:08:57.942 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:09:27.956 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:09:57.968 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:10:27.983 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:10:58.004 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:11:28.022 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:11:58.038 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:12:28.045 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:12:58.066 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:13:28.084 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:13:58.102 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:14:28.122 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:14:58.134 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:15:28.145 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:15:58.164 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:16:28.178 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:16:58.198 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:17:28.204 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:17:58.220 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:18:28.233 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:18:58.248 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:19:28.258 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:19:58.272 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:20:28.289 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:20:58.309 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:21:28.319 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:21:58.331 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:22:28.342 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:22:58.354 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:23:28.365 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:23:58.383 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:24:28.399 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:24:58.409 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:25:28.421 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:25:58.431 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:26:28.443 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:26:58.465 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:27:28.474 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:27:58.489 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:28:28.497 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 14:39:05.690 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 35208 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-17 14:39:05.691 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-17 14:39:05.692 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-17 14:39:06.419 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8099"]
+2025-03-17 14:39:06.420 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-17 14:39:06.420 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-17 14:39:06.468 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-17 14:39:06.701 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@1a914089[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-17 14:39:06.733 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8099"]
+2025-03-17 14:39:06.759 [main] INFO  com.dailybot.DailyBotApplication - Started DailyBotApplication in 1.422 seconds (process running for 2.04)
+2025-03-17 14:39:07.140 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2025-03-17 14:39:07.190 [http-nio-8099-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-17 14:39:07.241 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 15:29:46.823 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 10732 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-17 15:29:46.824 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-17 15:29:46.825 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-17 15:29:47.754 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2025-03-17 15:29:47.756 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-17 15:29:47.756 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-17 15:29:47.822 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-17 15:29:48.170 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@7b9088f2[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-17 15:29:48.221 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2025-03-17 15:29:48.254 [main] INFO  com.dailybot.DailyBotApplication - Started DailyBotApplication in 1.895 seconds (process running for 2.585)
+2025-03-17 15:29:48.769 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2025-03-17 15:29:51.791 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 15:29:51.792 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 15:30:12.034 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server stop.
+2025-03-17 15:30:15.039 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registryRemove(AdminBizClient.java:47)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:84)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 15:30:15.039 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registryRemove, content=null]
+2025-03-17 15:30:15.039 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destory.
+2025-03-17 15:30:15.039 [SpringApplicationShutdownHook] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server destroy success.
+2025-03-17 15:30:15.039 [xxl-job, executor TriggerCallbackThread] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor callback thread destory.
+2025-03-17 15:30:15.040 [Thread-2] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor retry callback thread destory.
+2025-03-17 15:30:17.253 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 4808 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-17 15:30:17.254 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-17 15:30:17.254 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-17 15:30:17.913 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8099"]
+2025-03-17 15:30:17.914 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-17 15:30:17.914 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-17 15:30:17.957 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-17 15:30:18.199 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@7b9088f2[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-17 15:30:18.241 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8099"]
+2025-03-17 15:30:18.267 [main] INFO  com.dailybot.DailyBotApplication - Started DailyBotApplication in 1.347 seconds (process running for 1.909)
+2025-03-17 15:30:18.711 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2025-03-17 15:30:21.730 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 15:30:21.732 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 15:30:54.743 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 15:30:54.743 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 15:31:27.747 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 15:31:27.747 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 15:32:00.763 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 15:32:00.764 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 15:32:33.776 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 15:32:33.777 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 15:33:06.804 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 15:33:06.804 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 15:33:39.810 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 15:33:39.810 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 15:34:12.831 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 15:34:12.831 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 15:34:45.851 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 15:34:45.851 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 15:35:18.880 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 15:35:18.880 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 15:35:51.899 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 15:35:51.899 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 15:36:24.919 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 15:36:24.919 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 15:36:57.934 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 15:36:57.934 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 15:37:30.943 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 15:37:30.943 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 15:38:03.956 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 15:38:03.956 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 15:38:36.967 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 15:38:36.967 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 15:39:09.974 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 15:39:09.974 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 15:39:42.991 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 15:39:42.991 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 15:40:16.015 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 15:40:16.015 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 15:40:49.032 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 15:40:49.032 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 15:41:22.058 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 15:41:22.058 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 15:41:55.075 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 15:41:55.075 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 15:42:28.100 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 15:42:28.100 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 15:43:09.198 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 22204 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-17 15:43:09.199 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-17 15:43:09.199 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-17 15:43:09.833 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8099"]
+2025-03-17 15:43:09.834 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-17 15:43:09.834 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-17 15:43:09.881 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-17 15:43:10.115 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@5785e813[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-17 15:43:10.145 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8099"]
+2025-03-17 15:43:10.168 [main] INFO  com.dailybot.DailyBotApplication - Started DailyBotApplication in 1.304 seconds (process running for 1.898)
+2025-03-17 15:43:10.549 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2025-03-17 15:43:13.558 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 15:43:13.559 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 16:07:25.292 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 24952 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-17 16:07:25.294 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-17 16:07:25.294 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-17 16:07:26.439 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8099"]
+2025-03-17 16:07:26.441 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-17 16:07:26.441 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-17 16:07:26.507 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-17 16:07:26.857 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@23bd0c81[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-17 16:07:26.902 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8099"]
+2025-03-17 16:07:26.907 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-03-17 16:07:26.910 [main] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server destroy success.
+2025-03-17 16:07:26.910 [xxl-job, executor TriggerCallbackThread] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor callback thread destory.
+2025-03-17 16:07:26.910 [Thread-2] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor retry callback thread destory.
+2025-03-17 16:07:26.950 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8099 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8099 or configure this application to listen on another port.
+
+2025-03-17 16:07:27.144 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 14748 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-17 16:07:27.145 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-17 16:07:27.146 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-17 16:07:27.819 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8099"]
+2025-03-17 16:07:27.820 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-17 16:07:27.820 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-17 16:07:27.864 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-17 16:07:28.119 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@6b0f266e[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-17 16:07:28.175 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8099"]
+2025-03-17 16:07:28.181 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-03-17 16:07:28.183 [main] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server destroy success.
+2025-03-17 16:07:28.184 [xxl-job, executor TriggerCallbackThread] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor callback thread destory.
+2025-03-17 16:07:28.185 [Thread-2] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor retry callback thread destory.
+2025-03-17 16:07:28.216 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8099 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8099 or configure this application to listen on another port.
+
+2025-03-17 16:07:50.450 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 20608 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-17 16:07:50.451 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-17 16:07:50.452 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-17 16:07:51.089 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2025-03-17 16:07:51.090 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-17 16:07:51.090 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-17 16:07:51.136 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-17 16:07:51.370 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@2725ca05[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-17 16:07:51.401 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2025-03-17 16:07:51.422 [main] INFO  com.dailybot.DailyBotApplication - Started DailyBotApplication in 1.288 seconds (process running for 1.877)
+2025-03-17 16:07:51.872 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2025-03-17 16:07:54.889 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 16:07:54.891 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 16:08:27.914 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 16:08:27.914 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 16:08:51.019 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server stop.
+2025-03-17 16:08:54.028 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registryRemove(AdminBizClient.java:47)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:84)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 16:08:54.028 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registryRemove, content=null]
+2025-03-17 16:08:54.029 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destory.
+2025-03-17 16:08:54.029 [SpringApplicationShutdownHook] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server destroy success.
+2025-03-17 16:08:54.029 [xxl-job, executor TriggerCallbackThread] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor callback thread destory.
+2025-03-17 16:08:54.029 [Thread-2] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor retry callback thread destory.
+2025-03-17 16:09:08.836 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 36668 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-17 16:09:08.837 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-17 16:09:08.838 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-17 16:09:09.479 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2025-03-17 16:09:09.480 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-17 16:09:09.480 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-17 16:09:09.528 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-17 16:09:09.747 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@4837f97e[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-17 16:09:09.779 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2025-03-17 16:09:09.800 [main] INFO  com.dailybot.DailyBotApplication - Started DailyBotApplication in 1.286 seconds (process running for 1.878)
+2025-03-17 16:09:10.223 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2025-03-17 16:09:10.225 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - unknown protocol: localhost
+java.net.MalformedURLException: unknown protocol: localhost
+	at java.base/java.net.URL.<init>(URL.java:681)
+	at java.base/java.net.URL.<init>(URL.java:569)
+	at java.base/java.net.URL.<init>(URL.java:516)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:69)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 16:09:10.227 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(unknown protocol: localhost), for url : localhost:8100/xxl-job-admin/api/registry, content=null]
+2025-03-17 16:09:21.708 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server stop.
+2025-03-17 16:09:21.709 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - unknown protocol: localhost
+java.net.MalformedURLException: unknown protocol: localhost
+	at java.base/java.net.URL.<init>(URL.java:681)
+	at java.base/java.net.URL.<init>(URL.java:569)
+	at java.base/java.net.URL.<init>(URL.java:516)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:69)
+	at com.xxl.job.core.biz.client.AdminBizClient.registryRemove(AdminBizClient.java:47)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:84)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 16:09:21.709 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(unknown protocol: localhost), for url : localhost:8100/xxl-job-admin/api/registryRemove, content=null]
+2025-03-17 16:09:21.709 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destory.
+2025-03-17 16:09:21.709 [SpringApplicationShutdownHook] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server destroy success.
+2025-03-17 16:09:21.709 [xxl-job, executor TriggerCallbackThread] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor callback thread destory.
+2025-03-17 16:09:21.709 [Thread-2] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor retry callback thread destory.
+2025-03-17 16:09:24.499 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 25092 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-17 16:09:24.500 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-17 16:09:24.501 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-17 16:09:25.149 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2025-03-17 16:09:25.150 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-17 16:09:25.151 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-17 16:09:25.192 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-17 16:09:25.438 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@22791b75[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-17 16:09:25.472 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2025-03-17 16:09:25.496 [main] INFO  com.dailybot.DailyBotApplication - Started DailyBotApplication in 1.338 seconds (process running for 1.884)
+2025-03-17 16:09:25.909 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2025-03-17 16:09:25.964 [http-nio-8100-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-17 16:09:26.022 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8100/xxl-job-admin/api/registry, content=null]
+2025-03-17 16:09:56.031 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting fail, StatusCode(404) invalid. for url : http://localhost:8100/xxl-job-admin/api/registry, content=null]
+2025-03-17 16:10:24.420 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server stop.
+2025-03-17 16:10:24.420 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connection refused: no further information
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registryRemove(AdminBizClient.java:47)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:84)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 16:10:24.422 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused: no further information), for url : http://localhost:8100/xxl-job-admin/api/registryRemove, content=null]
+2025-03-17 16:10:24.422 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destory.
+2025-03-17 16:10:24.422 [SpringApplicationShutdownHook] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server destroy success.
+2025-03-17 16:10:24.422 [xxl-job, executor TriggerCallbackThread] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor callback thread destory.
+2025-03-17 16:10:24.422 [Thread-2] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor retry callback thread destory.
+2025-03-17 16:10:27.218 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 32748 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-17 16:10:27.219 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-17 16:10:27.220 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-17 16:10:27.864 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2025-03-17 16:10:27.865 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-17 16:10:27.865 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-17 16:10:27.906 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-17 16:10:28.147 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@7b9088f2[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-17 16:10:28.178 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2025-03-17 16:10:28.202 [main] INFO  com.dailybot.DailyBotApplication - Started DailyBotApplication in 1.314 seconds (process running for 1.865)
+2025-03-17 16:10:28.591 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2025-03-17 16:10:28.609 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=The access token is wrong., content=null]
+2025-03-17 16:10:58.614 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=The access token is wrong., content=null]
+2025-03-17 16:11:28.625 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=The access token is wrong., content=null]
+2025-03-17 16:11:58.634 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=The access token is wrong., content=null]
+2025-03-17 16:12:28.646 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connection refused: no further information
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:387)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.setNewClient(HttpURLConnection.java:831)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.setNewClient(HttpURLConnection.java:819)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.writeRequests(HttpURLConnection.java:759)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1686)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:529)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:115)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 16:12:28.647 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused: no further information), for url : http://localhost:8099/xxl-job-admin/api/registry, content=null]
+2025-03-17 16:12:39.517 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server stop.
+2025-03-17 16:12:39.607 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=The access token is wrong., content=null]
+2025-03-17 16:12:39.607 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destory.
+2025-03-17 16:12:39.607 [SpringApplicationShutdownHook] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server destroy success.
+2025-03-17 16:12:39.607 [xxl-job, executor TriggerCallbackThread] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor callback thread destory.
+2025-03-17 16:12:39.607 [Thread-2] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor retry callback thread destory.
+2025-03-17 16:12:42.412 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 31760 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-17 16:12:42.413 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-17 16:12:42.413 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-17 16:12:43.087 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2025-03-17 16:12:43.088 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-17 16:12:43.088 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-17 16:12:43.131 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-17 16:12:43.363 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@4837f97e[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-17 16:12:43.396 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2025-03-17 16:12:43.419 [main] INFO  com.dailybot.DailyBotApplication - Started DailyBotApplication in 1.346 seconds (process running for 1.972)
+2025-03-17 16:12:43.825 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2025-03-17 16:12:56.012 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server stop.
+2025-03-17 16:12:56.013 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connection refused: no further information
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:387)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.setNewClient(HttpURLConnection.java:831)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.setNewClient(HttpURLConnection.java:819)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.writeRequests(HttpURLConnection.java:759)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1686)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:529)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:115)
+	at com.xxl.job.core.biz.client.AdminBizClient.registryRemove(AdminBizClient.java:47)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:84)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-17 16:12:56.014 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused: no further information), for url : http://localhost:8099/xxl-job-admin/api/registryRemove, content=null]
+2025-03-17 16:12:56.015 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destory.
+2025-03-17 16:12:56.015 [SpringApplicationShutdownHook] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server destroy success.
+2025-03-17 16:12:56.015 [xxl-job, executor TriggerCallbackThread] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor callback thread destory.
+2025-03-17 16:12:56.015 [Thread-2] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor retry callback thread destory.
+2025-03-17 17:56:42.182 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 35256 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-17 17:56:42.184 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-17 17:56:42.184 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-17 17:56:43.032 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2025-03-17 17:56:43.033 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-17 17:56:43.034 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-17 17:56:43.085 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-17 17:56:43.384 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@53314f76[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-17 17:56:43.419 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2025-03-17 17:56:43.447 [main] INFO  com.dailybot.DailyBotApplication - Started DailyBotApplication in 1.7 seconds (process running for 2.403)
+2025-03-17 17:56:43.897 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2025-03-17 17:59:09.855 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server stop.
+2025-03-17 17:59:09.891 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2025-03-17 17:59:09.892 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destory.
+2025-03-17 17:59:09.892 [SpringApplicationShutdownHook] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server destroy success.
+2025-03-17 17:59:09.892 [xxl-job, executor TriggerCallbackThread] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor callback thread destory.
+2025-03-17 17:59:09.892 [Thread-2] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor retry callback thread destory.
+2025-03-17 17:59:12.382 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 28804 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-17 17:59:12.383 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-17 17:59:12.383 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-17 17:59:13.056 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2025-03-17 17:59:13.056 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-17 17:59:13.056 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-17 17:59:13.098 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-17 17:59:13.324 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@1a914089[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-17 17:59:13.357 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2025-03-17 17:59:13.379 [main] INFO  com.dailybot.DailyBotApplication - Started DailyBotApplication in 1.34 seconds (process running for 1.915)
+2025-03-17 17:59:13.772 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2025-03-17 17:59:50.406 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server stop.
+2025-03-17 17:59:50.445 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2025-03-17 17:59:50.445 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destory.
+2025-03-17 17:59:50.445 [SpringApplicationShutdownHook] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server destroy success.
+2025-03-17 17:59:50.446 [xxl-job, executor TriggerCallbackThread] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor callback thread destory.
+2025-03-17 17:59:50.446 [Thread-2] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor retry callback thread destory.
+2025-03-17 17:59:52.837 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 19064 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-17 17:59:52.838 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-17 17:59:52.839 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-17 17:59:53.503 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2025-03-17 17:59:53.504 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-17 17:59:53.504 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-17 17:59:53.548 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-17 17:59:53.770 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@37d28938[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-17 17:59:53.801 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2025-03-17 17:59:53.831 [main] INFO  com.dailybot.DailyBotApplication - Started DailyBotApplication in 1.313 seconds (process running for 1.903)
+2025-03-17 17:59:54.228 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2025-03-17 18:00:08.333 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server stop.
+2025-03-17 18:00:08.371 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2025-03-17 18:00:08.371 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destory.
+2025-03-17 18:00:08.371 [SpringApplicationShutdownHook] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server destroy success.
+2025-03-17 18:00:08.371 [xxl-job, executor TriggerCallbackThread] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor callback thread destory.
+2025-03-17 18:00:08.372 [Thread-2] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor retry callback thread destory.

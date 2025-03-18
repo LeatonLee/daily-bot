@@ -1,0 +1,1650 @@
+2025-03-18 08:55:33.373 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 16176 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-18 08:55:33.378 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-18 08:55:33.379 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-18 08:55:34.222 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2025-03-18 08:55:34.222 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-18 08:55:34.223 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-18 08:55:34.274 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-18 08:55:34.575 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@3002e397[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-18 08:55:34.609 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2025-03-18 08:55:34.636 [main] INFO  com.dailybot.DailyBotApplication - Started DailyBotApplication in 1.706 seconds (process running for 2.461)
+2025-03-18 08:55:35.060 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2025-03-18 08:59:05.294 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server stop.
+2025-03-18 08:59:05.335 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2025-03-18 08:59:05.335 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destory.
+2025-03-18 08:59:05.335 [SpringApplicationShutdownHook] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server destroy success.
+2025-03-18 08:59:05.335 [xxl-job, executor TriggerCallbackThread] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor callback thread destory.
+2025-03-18 08:59:05.336 [Thread-2] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor retry callback thread destory.
+2025-03-18 08:59:10.149 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 28380 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-18 08:59:10.150 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-18 08:59:10.151 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-18 08:59:10.765 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2025-03-18 08:59:10.766 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-18 08:59:10.766 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-18 08:59:10.807 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-18 08:59:11.046 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@7b9088f2[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-18 08:59:11.081 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2025-03-18 08:59:11.105 [main] INFO  com.dailybot.DailyBotApplication - Started DailyBotApplication in 1.293 seconds (process running for 1.85)
+2025-03-18 08:59:11.106 [main] INFO  com.dailybot.task.DailyNewsTask - Starting dailyNewsJobHandler execution
+2025-03-18 08:59:11.485 [main] ERROR com.dailybot.task.DailyNewsTask - Task execution failed
+org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request on POST request for "https://api.deepseek.com/v1/chat/completions": "Failed to parse the request body as JSON: messages[0].content: control character (\u0000-\u001F) found while parsing a string at line 5 column 0"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:103)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:186)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:147)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:952)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:901)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:800)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:682)
+	at com.dailybot.service.HttpService.postJsonRequest(HttpService.java:17)
+	at com.dailybot.service.NewsService.generateDailyNews(NewsService.java:37)
+	at com.dailybot.task.DailyNewsTask.execute(DailyNewsTask.java:28)
+	at com.dailybot.DailyBotApplication.main(DailyBotApplication.java:15)
+2025-03-18 08:59:11.534 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2025-03-18 09:07:03.185 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server stop.
+2025-03-18 09:07:03.226 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2025-03-18 09:07:03.226 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destory.
+2025-03-18 09:07:03.226 [SpringApplicationShutdownHook] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server destroy success.
+2025-03-18 09:07:03.226 [xxl-job, executor TriggerCallbackThread] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor callback thread destory.
+2025-03-18 09:07:03.226 [Thread-2] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor retry callback thread destory.
+2025-03-18 09:07:07.148 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 34916 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-18 09:07:07.149 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-18 09:07:07.149 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-18 09:07:07.790 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2025-03-18 09:07:07.792 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-18 09:07:07.792 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-18 09:07:07.838 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-18 09:07:08.067 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@3f6cce7f[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-18 09:07:08.098 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2025-03-18 09:07:08.122 [main] INFO  com.dailybot.DailyBotApplication - Started DailyBotApplication in 1.298 seconds (process running for 1.887)
+2025-03-18 09:07:08.124 [main] INFO  com.dailybot.task.DailyNewsTask - Starting dailyNewsJobHandler execution
+2025-03-18 09:07:08.518 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2025-03-18 09:07:34.662 [main] DEBUG com.dailybot.task.DailyNewsTask - Generated news: ```markdown
+### 今日新闻摘要
+
+#### 1. 国内新闻：中国成功发射遥感卫星
+- **时间**：2023年10月10日
+- **地点**：中国酒泉卫星发射中心
+- **核心内容**：中国成功发射了一颗遥感卫星，该卫星将用于国土资源监测、环境保护和灾害预警等领域，进一步提升中国的空间观测能力。
+
+#### 2. 国际新闻：美国与欧盟达成贸易协议
+- **时间**：2023年10月10日
+- **地点**：比利时布鲁塞尔
+- **核心内容**：美国和欧盟宣布达成一项新的贸易协议，旨在减少关税壁垒，促进双边贸易，并加强在数字经济和绿色能源领域的合作。
+
+#### 3. 国内新闻：全国多地启动冬季供暖
+- **时间**：2023年10月10日
+- **地点**：中国北方多个城市
+- **核心内容**：随着气温逐渐下降，中国北方多个城市正式启动冬季供暖，确保居民温暖过冬。各地政府已提前做好供暖设施的检修和维护工作。
+
+#### 4. 国际新闻：联合国呼吁全球应对气候变化
+- **时间**：2023年10月10日
+- **地点**：美国纽约联合国总部
+- **核心内容**：联合国秘书长在气候峰会上发表讲话，呼吁全球各国加强合作，采取更积极的措施应对气候变化，确保实现《巴黎协定》的目标。
+
+#### 5. 国内新闻：中国高铁网络再添新线
+- **时间**：2023年10月10日
+- **地点**：中国西南地区
+- **核心内容**：中国西南地区一条新的高铁线路正式开通运营，该线路连接多个重要城市，将极大促进区域经济发展和人员流动。
+
+### 正能量评论
+在全球化和科技进步的今天，我们看到了各国在合作与创新中不断前行，共同应对挑战，创造美好未来。让我们携手共进，为世界的和平与繁荣贡献力量！
+```
+2025-03-18 09:07:56.967 [main] DEBUG com.dailybot.task.DailyNewsTask - Generated history: ### 历史上的今天
+
+1. **1969年 - 阿波罗11号登月成功**  
+   - **事件描述**：1969年7月20日，美国宇航员尼尔·阿姆斯特朗和巴兹·奥尔德林成功登陆月球，阿姆斯特朗成为第一个踏上月球表面的人类。  
+   - **历史影响**：这一事件标志着人类首次在地球以外的天体上留下足迹，极大地推动了航天科技的发展，并成为冷战时期美国科技实力的象征。
+
+2. **1944年 - 刺杀希特勒的“7月20日密谋案”**  
+   - **事件描述**：1944年7月20日，德国军官克劳斯·冯·施陶芬贝格在希特勒的东普鲁士总部放置炸弹，试图刺杀希特勒并推翻纳粹政权。然而，刺杀行动失败，希特勒仅受轻伤。  
+   - **历史影响**：这次刺杀行动虽然失败，但显示了德国国内对纳粹政权的反抗，成为二战期间德国抵抗运动的重要象征。
+
+3. **1925年 - 中国国民党成立国民政府**  
+   - **事件描述**：1925年7月20日，中国国民党在广州成立国民政府，标志着国民党正式成为中国的执政党，并开始推行“联俄、联共、扶助农工”的政策。  
+   - **历史影响**：国民政府的成立为后来的北伐战争奠定了基础，推动了中国近代史上的政治统一进程，同时也为国民党与共产党的合作与冲突埋下了伏笔。
+2025-03-18 09:07:56.967 [main] INFO  com.dailybot.task.DailyNewsTask - Generated final content: 🗞️ 每日晨报
+```markdown
+### 今日新闻摘要
+
+#### 1. 国内新闻：中国成功发射遥感卫星
+- **时间**：2023年10月10日
+- **地点**：中国酒泉卫星发射中心
+- **核心内容**：中国成功发射了一颗遥感卫星，该卫星将用于国土资源监测、环境保护和灾害预警等领域，进一步提升中国的空间观测能力。
+
+#### 2. 国际新闻：美国与欧盟达成贸易协议
+- **时间**：2023年10月10日
+- **地点**：比利时布鲁塞尔
+- **核心内容**：美国和欧盟宣布达成一项新的贸易协议，旨在减少关税壁垒，促进双边贸易，并加强在数字经济和绿色能源领域的合作。
+
+#### 3. 国内新闻：全国多地启动冬季供暖
+- **时间**：2023年10月10日
+- **地点**：中国北方多个城市
+- **核心内容**：随着气温逐渐下降，中国北方多个城市正式启动冬季供暖，确保居民温暖过冬。各地政府已提前做好供暖设施的检修和维护工作。
+
+#### 4. 国际新闻：联合国呼吁全球应对气候变化
+- **时间**：2023年10月10日
+- **地点**：美国纽约联合国总部
+- **核心内容**：联合国秘书长在气候峰会上发表讲话，呼吁全球各国加强合作，采取更积极的措施应对气候变化，确保实现《巴黎协定》的目标。
+
+#### 5. 国内新闻：中国高铁网络再添新线
+- **时间**：2023年10月10日
+- **地点**：中国西南地区
+- **核心内容**：中国西南地区一条新的高铁线路正式开通运营，该线路连接多个重要城市，将极大促进区域经济发展和人员流动。
+
+### 正能量评论
+在全球化和科技进步的今天，我们看到了各国在合作与创新中不断前行，共同应对挑战，创造美好未来。让我们携手共进，为世界的和平与繁荣贡献力量！
+```
+
+🕰️ 历史回顾
+### 历史上的今天
+
+1. **1969年 - 阿波罗11号登月成功**  
+   - **事件描述**：1969年7月20日，美国宇航员尼尔·阿姆斯特朗和巴兹·奥尔德林成功登陆月球，阿姆斯特朗成为第一个踏上月球表面的人类。  
+   - **历史影响**：这一事件标志着人类首次在地球以外的天体上留下足迹，极大地推动了航天科技的发展，并成为冷战时期美国科技实力的象征。
+
+2. **1944年 - 刺杀希特勒的“7月20日密谋案”**  
+   - **事件描述**：1944年7月20日，德国军官克劳斯·冯·施陶芬贝格在希特勒的东普鲁士总部放置炸弹，试图刺杀希特勒并推翻纳粹政权。然而，刺杀行动失败，希特勒仅受轻伤。  
+   - **历史影响**：这次刺杀行动虽然失败，但显示了德国国内对纳粹政权的反抗，成为二战期间德国抵抗运动的重要象征。
+
+3. **1925年 - 中国国民党成立国民政府**  
+   - **事件描述**：1925年7月20日，中国国民党在广州成立国民政府，标志着国民党正式成为中国的执政党，并开始推行“联俄、联共、扶助农工”的政策。  
+   - **历史影响**：国民政府的成立为后来的北伐战争奠定了基础，推动了中国近代史上的政治统一进程，同时也为国民党与共产党的合作与冲突埋下了伏笔。
+2025-03-18 09:07:56.969 [main] ERROR com.dailybot.task.DailyNewsTask - Task execution failed
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://127.0.0.1:5700/send_group_msg": Connection refused: connect
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:800)
+	at org.springframework.web.client.RestTemplate.postForEntity(RestTemplate.java:548)
+	at com.dailybot.service.QqBotService.sendGroupMessage(QqBotService.java:32)
+	at com.dailybot.task.DailyNewsTask.execute(DailyNewsTask.java:38)
+	at com.dailybot.DailyBotApplication.main(DailyBotApplication.java:15)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/java.net.Socket.connect(Socket.java:583)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at org.springframework.http.client.SimpleClientHttpRequest.executeInternal(SimpleClientHttpRequest.java:79)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
+	... 5 common frames omitted
+2025-03-18 09:22:26.779 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 20324 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-18 09:22:26.781 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-18 09:22:26.781 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-18 09:22:27.627 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2025-03-18 09:22:27.628 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-18 09:22:27.628 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-18 09:22:27.684 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-18 09:22:28.007 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@1a914089[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-18 09:22:28.047 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2025-03-18 09:22:28.075 [main] INFO  com.dailybot.DailyBotApplication - Started DailyBotApplication in 1.773 seconds (process running for 2.488)
+2025-03-18 09:22:28.078 [main] INFO  com.dailybot.task.DailyNewsTask - Starting dailyNewsJobHandler execution
+2025-03-18 09:22:28.538 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2025-03-18 09:22:57.617 [main] DEBUG com.dailybot.task.DailyNewsTask - Generated news: ```markdown
+# 今日新闻摘要
+
+## 1. 国内新闻：中国成功发射遥感卫星
+- **时间**：2023年10月10日
+- **地点**：中国酒泉卫星发射中心
+- **核心内容**：中国成功发射了一颗遥感卫星，该卫星将用于国土资源监测、环境保护和灾害预警等领域，进一步提升中国的空间观测能力。
+
+## 2. 国际新闻：美国与欧盟达成贸易协议
+- **时间**：2023年10月10日
+- **地点**：美国华盛顿特区
+- **核心内容**：美国与欧盟宣布达成一项新的贸易协议，旨在减少关税壁垒，促进双边贸易，并加强在数字经济和绿色能源领域的合作。
+
+## 3. 国内新闻：全国多地启动冬季供暖
+- **时间**：2023年10月10日
+- **地点**：中国北方多个城市
+- **核心内容**：随着气温逐渐下降，中国北方多个城市已启动冬季供暖系统，确保居民温暖过冬。各地政府也加强了对供暖设施的检查和维护，确保供暖安全。
+
+## 4. 国际新闻：联合国气候变化大会开幕
+- **时间**：2023年10月10日
+- **地点**：埃及沙姆沙伊赫
+- **核心内容**：第28届联合国气候变化大会（COP28）在埃及沙姆沙伊赫开幕，全球各国代表将就应对气候变化、减少温室气体排放等议题展开讨论，寻求全球合作解决方案。
+
+## 5. 国内新闻：中国高铁网络再添新线
+- **时间**：2023年10月10日
+- **地点**：中国西南地区
+- **核心内容**：中国西南地区一条新的高铁线路正式开通运营，连接多个重要城市，进一步缩短了区域间的交通时间，促进了区域经济一体化发展。
+
+# 正能量评论
+在全球化和科技进步的今天，各国合作与创新是应对挑战、实现可持续发展的关键。让我们携手共进，共创美好未来！
+```
+2025-03-18 09:23:23.987 [main] DEBUG com.dailybot.task.DailyNewsTask - Generated history: ## 历史上的今天 (03月18日)
+
+**1. 1965年 - 苏联宇航员阿列克谢·列昂诺夫完成人类首次太空行走**
+
+* **事件描述:** 在“上升2号”任务中，苏联宇航员阿列克谢·列昂诺夫穿着特制的宇航服，离开飞船，在太空中漂浮了12分钟，成为第一个进行太空行走的人类。
+* **历史影响:** 这次太空行走是人类探索太空的重要里程碑，证明了人类可以在太空环境中生存和工作，为后续的空间站建设和太空任务奠定了基础。
+
+**2. 1871年 - 巴黎公社成立**
+
+* **事件描述:** 在普法战争失败和法国政府投降的背景下，巴黎工人阶级和市民发动起义，推翻了资产阶级政府，建立了世界上第一个无产阶级政权——巴黎公社。
+* **历史影响:** 巴黎公社虽然只存在了72天，但它为国际共产主义运动提供了宝贵的经验教训，对后来的社会主义革命产生了深远的影响。
+
+**3. 1922年 - 圣雄甘地被判入狱6年**
+
+* **事件描述:** 印度独立运动领袖圣雄甘地因领导非暴力不合作运动，反抗英国殖民统治，被英国殖民当局以煽动叛乱罪判处6年监禁。
+* **历史影响:** 甘地的入狱激起了印度人民更强烈的反抗情绪，推动了印度独立运动的进一步发展。甘地的非暴力思想也影响了世界各地的民权运动。
+2025-03-18 09:23:23.988 [main] INFO  com.dailybot.task.DailyNewsTask - Generated final content: 🗞️ 每日晨报
+```markdown
+# 今日新闻摘要
+
+## 1. 国内新闻：中国成功发射遥感卫星
+- **时间**：2023年10月10日
+- **地点**：中国酒泉卫星发射中心
+- **核心内容**：中国成功发射了一颗遥感卫星，该卫星将用于国土资源监测、环境保护和灾害预警等领域，进一步提升中国的空间观测能力。
+
+## 2. 国际新闻：美国与欧盟达成贸易协议
+- **时间**：2023年10月10日
+- **地点**：美国华盛顿特区
+- **核心内容**：美国与欧盟宣布达成一项新的贸易协议，旨在减少关税壁垒，促进双边贸易，并加强在数字经济和绿色能源领域的合作。
+
+## 3. 国内新闻：全国多地启动冬季供暖
+- **时间**：2023年10月10日
+- **地点**：中国北方多个城市
+- **核心内容**：随着气温逐渐下降，中国北方多个城市已启动冬季供暖系统，确保居民温暖过冬。各地政府也加强了对供暖设施的检查和维护，确保供暖安全。
+
+## 4. 国际新闻：联合国气候变化大会开幕
+- **时间**：2023年10月10日
+- **地点**：埃及沙姆沙伊赫
+- **核心内容**：第28届联合国气候变化大会（COP28）在埃及沙姆沙伊赫开幕，全球各国代表将就应对气候变化、减少温室气体排放等议题展开讨论，寻求全球合作解决方案。
+
+## 5. 国内新闻：中国高铁网络再添新线
+- **时间**：2023年10月10日
+- **地点**：中国西南地区
+- **核心内容**：中国西南地区一条新的高铁线路正式开通运营，连接多个重要城市，进一步缩短了区域间的交通时间，促进了区域经济一体化发展。
+
+# 正能量评论
+在全球化和科技进步的今天，各国合作与创新是应对挑战、实现可持续发展的关键。让我们携手共进，共创美好未来！
+```
+
+🕰️ 历史回顾
+## 历史上的今天 (03月18日)
+
+**1. 1965年 - 苏联宇航员阿列克谢·列昂诺夫完成人类首次太空行走**
+
+* **事件描述:** 在“上升2号”任务中，苏联宇航员阿列克谢·列昂诺夫穿着特制的宇航服，离开飞船，在太空中漂浮了12分钟，成为第一个进行太空行走的人类。
+* **历史影响:** 这次太空行走是人类探索太空的重要里程碑，证明了人类可以在太空环境中生存和工作，为后续的空间站建设和太空任务奠定了基础。
+
+**2. 1871年 - 巴黎公社成立**
+
+* **事件描述:** 在普法战争失败和法国政府投降的背景下，巴黎工人阶级和市民发动起义，推翻了资产阶级政府，建立了世界上第一个无产阶级政权——巴黎公社。
+* **历史影响:** 巴黎公社虽然只存在了72天，但它为国际共产主义运动提供了宝贵的经验教训，对后来的社会主义革命产生了深远的影响。
+
+**3. 1922年 - 圣雄甘地被判入狱6年**
+
+* **事件描述:** 印度独立运动领袖圣雄甘地因领导非暴力不合作运动，反抗英国殖民统治，被英国殖民当局以煽动叛乱罪判处6年监禁。
+* **历史影响:** 甘地的入狱激起了印度人民更强烈的反抗情绪，推动了印度独立运动的进一步发展。甘地的非暴力思想也影响了世界各地的民权运动。
+2025-03-18 09:23:23.990 [main] ERROR com.dailybot.task.DailyNewsTask - Task execution failed
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://127.0.0.1:5700/send_group_msg": Connection refused: connect
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:800)
+	at org.springframework.web.client.RestTemplate.postForEntity(RestTemplate.java:548)
+	at com.dailybot.service.QqBotService.sendGroupMessage(QqBotService.java:32)
+	at com.dailybot.task.DailyNewsTask.execute(DailyNewsTask.java:38)
+	at com.dailybot.DailyBotApplication.main(DailyBotApplication.java:15)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/java.net.Socket.connect(Socket.java:583)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at org.springframework.http.client.SimpleClientHttpRequest.executeInternal(SimpleClientHttpRequest.java:79)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
+	... 5 common frames omitted
+2025-03-18 09:48:59.362 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server stop.
+2025-03-18 09:48:59.406 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2025-03-18 09:48:59.407 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destory.
+2025-03-18 09:48:59.407 [SpringApplicationShutdownHook] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server destroy success.
+2025-03-18 09:48:59.407 [xxl-job, executor TriggerCallbackThread] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor callback thread destory.
+2025-03-18 09:48:59.407 [Thread-2] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor retry callback thread destory.
+2025-03-18 09:49:03.677 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 30300 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-18 09:49:03.678 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-18 09:49:03.679 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-18 09:49:04.305 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2025-03-18 09:49:04.306 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-18 09:49:04.307 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-18 09:49:04.350 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-18 09:49:04.584 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@486bd064[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-18 09:49:04.616 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2025-03-18 09:49:04.639 [main] INFO  com.dailybot.DailyBotApplication - Started DailyBotApplication in 1.288 seconds (process running for 1.862)
+2025-03-18 09:49:04.644 [main] INFO  com.dailybot.task.DailyNewsTask - Starting dailyNewsJobHandler execution
+2025-03-18 09:49:05.097 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2025-03-18 09:50:00.104 [main] INFO  com.dailybot.task.DailyNewsTask - Generated final content: 🗞️ 每日晨报
+今日新闻摘要
+
+1. 国内新闻：中国成功发射遥感卫星
+时间：2023年10月10日
+地点：中国酒泉卫星发射中心
+核心内容：中国成功发射了一颗遥感卫星，该卫星将用于国土资源调查、环境监测等领域，标志着中国在航天技术领域的又一重大进展。
+
+2. 国际新闻：美国与伊朗重启核谈判
+时间：2023年10月10日
+地点：瑞士日内瓦
+核心内容：美国与伊朗在瑞士日内瓦重启核谈判，双方就伊朗核问题展开深入讨论，旨在达成一项全面协议，缓解地区紧张局势。
+
+3. 国内新闻：中国发布新一轮经济刺激政策
+时间：2023年10月10日
+地点：北京
+核心内容：中国政府发布新一轮经济刺激政策，旨在提振内需、稳定就业，推动经济高质量发展，政策包括减税降费、扩大基础设施投资等措施。
+
+4. 国际新闻：欧洲央行宣布加息
+时间：2023年10月10日
+地点：德国法兰克福
+核心内容：欧洲央行宣布将基准利率上调25个基点，以应对持续的通胀压力，这是欧洲央行自去年以来的首次加息，市场对此反应强烈。
+
+5. 国内新闻：中国启动新一轮环保督察
+时间：2023年10月10日
+地点：全国范围
+核心内容：中国启动新一轮中央环保督察，重点检查各地在污染防治、生态保护等方面的落实情况，旨在推动生态文明建设，确保环境质量持续改善。
+
+正能量评论
+在全球挑战与机遇并存的时代，我们坚信通过不懈努力和智慧合作，人类能够克服困难，共创美好未来。
+
+🕰️ 历史回顾
+以下是关于3月18日的“历史上的今天”内容：
+
+1. 1965年 苏联宇航员阿列克谢·列昂诺夫完成人类首次太空行走  
+   事件描述：阿列克谢·列昂诺夫在“上升2号”任务中走出飞船，进行了约12分钟的太空行走，成为人类历史上第一位在太空中自由漂浮的人。  
+   历史影响：这一壮举标志着人类探索太空的重要里程碑，为后续的太空任务和空间站建设奠定了基础，同时也推动了航天技术的快速发展。
+
+2. 1871年 巴黎公社成立  
+   事件描述：在法国巴黎，工人阶级和革命者推翻了资产阶级政府，建立了世界上第一个无产阶级政权——巴黎公社。  
+   历史影响：巴黎公社虽然仅存在了72天，但它对国际工人运动和社会主义思想产生了深远影响，成为马克思主义理论的重要实践案例，激励了后来的革命运动。
+
+3. 1937年 美国德克萨斯州新伦敦学校爆炸事件  
+   事件描述：德克萨斯州新伦敦的一所学校因天然气泄漏引发爆炸，导致近300名学生和教师死亡，成为美国历史上最严重的学校灾难之一。  
+   历史影响：这一悲剧促使美国加强了对天然气使用的安全监管，推动了相关法律法规的完善，同时也提高了公众对学校建筑安全标准的关注。
+
+这些事件在各自的历史背景下产生了深远的影响，展现了人类在探索、革命和安全领域的进步与反思。
+2025-03-18 09:50:00.108 [main] ERROR com.dailybot.task.DailyNewsTask - Task execution failed
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://127.0.0.1:5700/send_group_msg": Connection refused: connect
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:800)
+	at org.springframework.web.client.RestTemplate.postForEntity(RestTemplate.java:548)
+	at com.dailybot.service.QqBotService.sendGroupMessage(QqBotService.java:32)
+	at com.dailybot.task.DailyNewsTask.execute(DailyNewsTask.java:37)
+	at com.dailybot.DailyBotApplication.main(DailyBotApplication.java:15)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/java.net.Socket.connect(Socket.java:583)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at org.springframework.http.client.SimpleClientHttpRequest.executeInternal(SimpleClientHttpRequest.java:79)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
+	... 5 common frames omitted
+2025-03-18 09:52:57.619 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server stop.
+2025-03-18 09:52:57.657 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2025-03-18 09:52:57.658 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destory.
+2025-03-18 09:52:57.658 [SpringApplicationShutdownHook] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server destroy success.
+2025-03-18 09:52:57.658 [xxl-job, executor TriggerCallbackThread] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor callback thread destory.
+2025-03-18 09:52:57.658 [Thread-2] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor retry callback thread destory.
+2025-03-18 09:53:01.540 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 19008 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-18 09:53:01.541 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-18 09:53:01.541 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-18 09:53:02.146 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2025-03-18 09:53:02.147 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-18 09:53:02.147 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-18 09:53:02.187 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-18 09:53:02.395 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@703fa45[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-18 09:53:02.426 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2025-03-18 09:53:02.450 [main] INFO  com.dailybot.DailyBotApplication - Started DailyBotApplication in 1.265 seconds (process running for 1.838)
+2025-03-18 09:53:02.451 [main] INFO  com.dailybot.task.DailyNewsTask - Starting dailyNewsJobHandler execution
+2025-03-18 09:53:02.902 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2025-03-18 09:53:59.894 [main] INFO  com.dailybot.task.DailyNewsTask - Generated final content: 🗞️ 每日晨报
+2025年03月18日新闻摘要
+
+1. 国内新闻：中国成功发射新一代载人飞船
+时间：2025年03月18日 09:00
+地点：中国酒泉卫星发射中心
+核心内容：中国成功发射新一代载人飞船“神舟十六号”，标志着中国载人航天工程进入新阶段。此次任务将进行为期6个月的空间站驻留任务，进一步验证中国空间站的技术能力。
+
+2. 国际新闻：全球气候峰会达成新协议
+时间：2025年03月18日 14:00
+地点：法国巴黎
+核心内容：全球气候峰会在巴黎闭幕，各国达成新的气候协议，承诺到2030年将全球温室气体排放量减少50%。协议还包括对发展中国家提供更多资金支持，以帮助其应对气候变化。
+
+3. 国内新闻：中国首条跨海高铁开通
+时间：2025年03月18日 10:30
+地点：中国福建省
+核心内容：中国首条跨海高铁——福厦高铁正式开通运营。该高铁线路全长约300公里，连接福州和厦门，设计时速350公里，将大幅缩短两地间的旅行时间，促进区域经济发展。
+
+4. 国际新闻：美国与伊朗重启核谈判
+时间：2025年03月18日 16:00
+地点：瑞士日内瓦
+核心内容：美国与伊朗在日内瓦重启核谈判，双方就伊朗核问题展开新一轮磋商。此次谈判旨在解决伊朗核计划引发的国际争端，恢复2015年达成的伊朗核协议。
+
+5. 国内新闻：中国启动“数字人民币”全国推广
+时间：2025年03月18日 11:00
+地点：中国北京
+核心内容：中国人民银行宣布启动“数字人民币”全国推广计划，将在全国范围内逐步推广使用数字人民币。此举旨在提升支付系统的效率和安全性，推动金融科技创新。
+
+正能量评论
+在科技与环保的双重推动下，全球正朝着更加绿色、智能的未来迈进，每一个进步都是人类智慧的结晶，让我们共同期待更美好的明天！
+
+🕰️ 历史回顾
+历史上的今天（03月18日）
+
+1. 1965年 苏联宇航员阿列克谢·列昂诺夫完成人类首次太空行走  
+   事件描述：苏联宇航员阿列克谢·列昂诺夫在“上升2号”任务中，成功进行了人类历史上第一次太空行走，持续了12分钟。  
+   历史影响：这一壮举标志着人类在太空探索领域迈出了重要一步，为后续的太空任务奠定了基础，并推动了国际空间站的建设与合作。
+
+2. 1871年 巴黎公社成立  
+   事件描述：法国巴黎的工人阶级和革命者发动起义，推翻了资产阶级政府，成立了巴黎公社，这是历史上第一个无产阶级政权。  
+   历史影响：巴黎公社虽然仅存在了72天，但它对国际工人运动和社会主义思想产生了深远影响，成为后来许多革命运动的灵感来源。
+
+3. 1937年 美国德克萨斯州新伦敦学校爆炸事件  
+   事件描述：德克萨斯州新伦敦的一所学校因天然气泄漏引发爆炸，导致近300名学生和教师死亡，成为美国历史上最严重的学校灾难之一。  
+   历史影响：这一悲剧促使美国加强了对公共建筑安全标准的监管，特别是在天然气使用和建筑安全方面，推动了相关法律的制定和实施。
+2025-03-18 09:53:59.895 [main] ERROR com.dailybot.task.DailyNewsTask - Task execution failed
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://127.0.0.1:5700/send_group_msg": Connection refused: connect
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:800)
+	at org.springframework.web.client.RestTemplate.postForEntity(RestTemplate.java:548)
+	at com.dailybot.service.QqBotService.sendGroupMessage(QqBotService.java:32)
+	at com.dailybot.task.DailyNewsTask.execute(DailyNewsTask.java:37)
+	at com.dailybot.DailyBotApplication.main(DailyBotApplication.java:15)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/java.net.Socket.connect(Socket.java:583)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at org.springframework.http.client.SimpleClientHttpRequest.executeInternal(SimpleClientHttpRequest.java:79)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
+	... 5 common frames omitted
+2025-03-18 10:43:40.690 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:896)
+	at java.base/sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:726)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1688)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:529)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:115)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-18 10:43:40.691 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connect timed out), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-18 10:44:12.934 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connection refused: no further information
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-18 10:44:12.934 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused: no further information), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-18 10:44:45.157 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connection refused: no further information
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-18 10:44:45.157 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused: no further information), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-18 10:45:17.349 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connection refused: no further information
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-18 10:45:17.349 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused: no further information), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-18 10:45:49.541 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connection refused: no further information
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-18 10:45:49.541 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused: no further information), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-18 10:46:21.803 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connection refused: no further information
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-18 10:46:21.803 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused: no further information), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-18 10:46:54.018 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connection refused: no further information
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-18 10:46:54.019 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused: no further information), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-18 10:47:26.279 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connection refused: no further information
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-18 10:47:26.279 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused: no further information), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-18 10:47:58.506 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connection refused: no further information
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-18 10:47:58.506 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused: no further information), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-18 10:48:30.722 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connection refused: no further information
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-18 10:48:30.722 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused: no further information), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-18 10:49:02.948 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connection refused: no further information
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-18 10:49:02.949 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused: no further information), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-18 10:49:35.204 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connection refused: no further information
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-18 10:49:35.204 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused: no further information), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-18 10:50:07.422 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connection refused: no further information
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-18 10:50:07.422 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused: no further information), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-18 10:50:39.649 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connection refused: no further information
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-18 10:50:39.650 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused: no further information), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-18 10:51:11.863 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connection refused: no further information
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-18 10:51:11.864 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused: no further information), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-18 10:51:44.054 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connection refused: no further information
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-18 10:51:44.054 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused: no further information), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-18 10:52:16.302 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connection refused: no further information
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-18 10:52:16.303 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused: no further information), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-18 10:52:48.503 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connection refused: no further information
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-18 10:52:48.504 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused: no further information), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-18 10:53:20.713 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connection refused: no further information
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-18 10:53:20.713 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused: no further information), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-18 10:53:52.923 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connection refused: no further information
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-18 10:53:52.923 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused: no further information), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-18 11:39:01.746 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 29892 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-18 11:39:01.747 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-18 11:39:01.747 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-18 11:39:02.512 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2025-03-18 11:39:02.513 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-18 11:39:02.513 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-18 11:39:02.564 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-18 11:39:02.836 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@5e905f2c[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-18 11:39:02.872 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2025-03-18 11:39:02.894 [main] INFO  com.dailybot.DailyBotApplication - Started DailyBotApplication in 1.578 seconds (process running for 2.234)
+2025-03-18 11:39:02.896 [main] INFO  com.dailybot.task.DailyNewsTask - Starting dailyNewsJobHandler execution
+2025-03-18 11:39:03.350 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2025-03-18 11:39:05.627 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connection refused: no further information
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-18 11:39:05.630 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused: no further information), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-18 11:39:37.847 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connection refused: no further information
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-18 11:39:37.847 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused: no further information), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-18 11:40:03.643 [main] INFO  com.dailybot.task.DailyNewsTask - Generated final content: 🗞️ 每日晨报
+2025年3月17日-18日新闻摘要
+
+1. 中国成功发射新一代载人飞船
+时间: 2025年3月17日 10:30
+地点: 中国酒泉卫星发射中心
+核心内容: 中国成功发射新一代载人飞船“神舟二十号”，搭载三名航天员前往中国空间站，执行为期六个月的太空任务。此次任务标志着中国载人航天工程进入新阶段。
+
+2. 美国与伊朗达成核协议框架
+时间: 2025年3月17日 14:00
+地点: 瑞士日内瓦
+核心内容: 美国与伊朗在日内瓦达成核协议框架，伊朗同意限制其核活动以换取国际社会解除部分经济制裁。该协议被视为中东地区和平的重要一步。
+
+3. 欧洲央行宣布降息以应对经济放缓
+时间: 2025年3月17日 16:00
+地点: 德国法兰克福
+核心内容: 欧洲央行宣布将基准利率下调25个基点至0.25%，以应对欧元区经济放缓。这是欧洲央行自2023年以来的首次降息，旨在刺激经济增长和通胀。
+
+4. 日本福岛核电站废水排放引发国际关注
+时间: 2025年3月17日 18:30
+地点: 日本福岛
+核心内容: 日本政府宣布将于2025年4月开始排放福岛核电站处理后的废水入海，引发周边国家和国际社会的广泛关注和争议。国际原子能机构表示将密切监测排放过程。
+
+5. 印度尼西亚发生7.2级地震
+时间: 2025年3月18日 06:00
+地点: 印度尼西亚苏门答腊岛
+核心内容: 印度尼西亚苏门答腊岛发生7.2级地震，震源深度为10公里。目前尚无重大人员伤亡报告，但当地政府已启动紧急响应机制，疏散沿海居民以防海啸。
+
+正能量评论
+在全球面临各种挑战的今天，各国政府和人民展现出的合作与坚韧精神，让我们相信未来充满希望与可能。
+
+🕰️ 历史回顾
+历史上的今天（03月18日）
+
+1. 1965年 苏联宇航员阿列克谢·列昂诺夫完成人类首次太空行走  
+   事件描述：苏联宇航员阿列克谢·列昂诺夫在“上升2号”任务中，成功进行了人类历史上首次太空行走，持续了12分钟。  
+   历史影响：这一壮举标志着人类探索太空的重要里程碑，为后续的太空任务奠定了基础，并推动了国际太空竞赛的发展。
+
+2. 1871年 巴黎公社成立  
+   事件描述：在法国巴黎，工人阶级和革命者宣布成立巴黎公社，这是历史上第一个由工人阶级掌握政权的政府。  
+   历史影响：巴黎公社虽然仅存在了72天，但它对后来的社会主义运动和工人运动产生了深远影响，成为无产阶级革命的象征。
+
+3. 1937年 美国德克萨斯州新伦敦学校发生天然气爆炸事故  
+   事件描述：德克萨斯州新伦敦的一所学校因天然气泄漏发生爆炸，导致近300名学生和教师死亡，成为美国历史上最严重的学校灾难之一。  
+   历史影响：这一悲剧促使美国加强了对天然气使用的安全监管，推动了相关法律法规的完善，并提高了公众对安全问题的关注。
+
+这些事件在各自的历史背景下产生了深远的影响，展现了人类在探索、革命和安全领域的进步与反思。
+2025-03-18 11:40:03.647 [main] ERROR com.dailybot.task.DailyNewsTask - Task execution failed
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://127.0.0.1:5800/send_group_msg": Connection refused: connect
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:800)
+	at org.springframework.web.client.RestTemplate.postForEntity(RestTemplate.java:548)
+	at com.dailybot.service.QqBotService.sendGroupMessage(QqBotService.java:32)
+	at com.dailybot.task.DailyNewsTask.execute(DailyNewsTask.java:37)
+	at com.dailybot.DailyBotApplication.main(DailyBotApplication.java:15)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/java.net.Socket.connect(Socket.java:583)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at org.springframework.http.client.SimpleClientHttpRequest.executeInternal(SimpleClientHttpRequest.java:79)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
+	... 5 common frames omitted
+2025-03-18 11:40:10.034 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connection refused: no further information
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-18 11:40:10.034 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused: no further information), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-18 11:40:42.215 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connection refused: no further information
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-18 11:40:42.216 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused: no further information), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-18 11:41:14.438 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connection refused: no further information
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-18 11:41:14.438 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused: no further information), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-18 11:41:46.658 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connection refused: no further information
+java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:178)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2025-03-18 11:41:46.658 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused: no further information), for url : http://123.57.248.153:8099/xxl-job-admin/api/registry, content=null]
+2025-03-18 11:46:39.364 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 22788 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-18 11:46:39.364 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-18 11:46:39.365 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-18 11:46:40.011 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2025-03-18 11:46:40.013 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-18 11:46:40.013 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-18 11:46:40.058 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-18 11:46:40.307 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@7ac48e10[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-18 11:46:40.340 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2025-03-18 11:46:40.365 [main] INFO  com.dailybot.DailyBotApplication - Started DailyBotApplication in 1.326 seconds (process running for 1.89)
+2025-03-18 11:46:40.367 [main] INFO  com.dailybot.task.DailyNewsTask - Starting dailyNewsJobHandler execution
+2025-03-18 11:46:40.775 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2025-03-18 11:47:56.242 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 7552 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-18 11:47:56.243 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-18 11:47:56.243 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-18 11:47:56.923 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2025-03-18 11:47:56.925 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-18 11:47:56.925 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-18 11:47:56.974 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-18 11:47:57.203 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@7d0cd23c[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-18 11:47:57.241 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2025-03-18 11:47:57.264 [main] INFO  com.dailybot.DailyBotApplication - Started DailyBotApplication in 1.399 seconds (process running for 2.003)
+2025-03-18 11:47:57.269 [main] INFO  com.dailybot.task.DailyNewsTask - Starting dailyNewsJobHandler execution
+2025-03-18 11:47:57.682 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2025-03-18 11:48:55.581 [main] INFO  com.dailybot.task.DailyNewsTask - Generated final content: 🗞️ 每日晨报
+2025年03月17日 08:00 至 2025年03月18日 08:00 新闻摘要
+
+1. 中国成功发射新一代载人飞船
+   时间：2025年03月17日 10:30  
+   地点：中国酒泉卫星发射中心  
+   核心内容：中国成功发射新一代载人飞船“神舟十六号”，搭载三名航天员前往中国空间站。此次任务标志着中国载人航天工程进入新阶段，未来将开展更多科学实验和技术验证。
+
+2. 美国与伊朗达成临时核协议
+   时间：2025年03月17日 14:00  
+   地点：瑞士日内瓦  
+   核心内容：美国与伊朗在日内瓦达成临时核协议，伊朗同意暂停部分核活动以换取部分制裁解除。该协议为未来全面谈判奠定了基础，国际社会对此表示谨慎乐观。
+
+3. 欧洲央行宣布加息以应对通胀
+   时间：2025年03月17日 16:00  
+   地点：德国法兰克福  
+   核心内容：欧洲央行宣布将基准利率上调0.25个百分点至4.25%，以应对持续高企的通胀压力。这是欧洲央行自2024年以来的第五次加息，市场预计未来可能进一步收紧货币政策。
+
+4. 日本福岛核电站废水排放引发国际争议
+   时间：2025年03月17日 18:00  
+   地点：日本福岛  
+   核心内容：日本政府宣布将于2025年4月开始排放福岛核电站处理后的废水，引发周边国家和环保组织的强烈反对。国际原子能机构表示将监督排放过程，但争议仍在持续。
+
+5. 非洲联盟峰会聚焦气候变化与粮食安全
+   时间：2025年03月18日 06:00  
+   地点：埃塞俄比亚亚的斯亚贝巴  
+   核心内容：非洲联盟峰会在亚的斯亚贝巴开幕，重点讨论气候变化对非洲粮食安全的影响。与会国家呼吁国际社会提供更多资金和技术支持，以帮助非洲应对日益严峻的气候挑战。
+
+正能量评论
+在充满挑战的时代，全球合作与科技创新是解决问题的关键。让我们携手共进，为更美好的未来贡献力量！
+
+🕰️ 历史回顾
+历史上的今天（03月18日）
+
+1. 1965年 苏联宇航员阿列克谢·列昂诺夫完成人类首次太空行走  
+   事件描述：阿列克谢·列昂诺夫在“上升2号”任务中，成功进行了人类历史上首次太空行走，持续了约12分钟。  
+   历史影响：这一壮举标志着人类在太空探索领域迈出了重要一步，为后续的太空任务奠定了基础，同时也加剧了美苏之间的太空竞赛。
+
+2. 1871年 巴黎公社成立  
+   事件描述：在法国巴黎，工人阶级和革命者成立了巴黎公社，这是历史上第一个由工人阶级掌权的政府。  
+   历史影响：巴黎公社虽然仅存在了72天，但它对后来的社会主义运动和工人运动产生了深远影响，成为无产阶级革命的象征。
+
+3. 1937年 美国德克萨斯州新伦敦学校发生天然气爆炸  
+   事件描述：新伦敦学校因天然气泄漏引发爆炸，导致近300名学生和教师死亡，成为美国历史上最严重的学校灾难之一。  
+   历史影响：这一悲剧促使美国加强了对天然气使用的安全监管，推动了相关法律法规的完善，以防止类似事故再次发生。
+
+这些事件在各自的历史背景下产生了深远的影响，成为人类历史进程中的重要里程碑。
+2025-03-18 11:48:55.584 [main] ERROR com.dailybot.task.DailyNewsTask - Task execution failed
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://127.0.0.1:5800/send_group_msg": Connection refused: connect
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:800)
+	at org.springframework.web.client.RestTemplate.postForEntity(RestTemplate.java:548)
+	at com.dailybot.service.QqBotService.sendGroupMessage(QqBotService.java:32)
+	at com.dailybot.task.DailyNewsTask.execute(DailyNewsTask.java:37)
+	at com.dailybot.DailyBotApplication.main(DailyBotApplication.java:15)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/java.net.Socket.connect(Socket.java:583)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at org.springframework.http.client.SimpleClientHttpRequest.executeInternal(SimpleClientHttpRequest.java:79)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
+	... 5 common frames omitted
+2025-03-18 13:42:55.369 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 23324 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-18 13:42:55.370 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-18 13:42:55.371 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-18 13:42:56.125 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2025-03-18 13:42:56.126 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-18 13:42:56.126 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-18 13:42:56.175 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-18 13:42:56.447 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@2506b881[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-18 13:42:56.480 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2025-03-18 13:42:56.501 [main] INFO  com.dailybot.DailyBotApplication - Started DailyBotApplication in 1.577 seconds (process running for 2.335)
+2025-03-18 13:42:56.503 [main] INFO  com.dailybot.task.DailyNewsTask - Starting dailyNewsJobHandler execution
+2025-03-18 13:42:56.941 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2025-03-18 13:43:52.142 [main] INFO  com.dailybot.task.DailyNewsTask - Generated final content: 🗞️ 每日晨报
+2025年3月17日-18日新闻摘要
+
+1. 中国成功发射新一代载人飞船  
+时间：2025年03月17日 10:30  
+地点：中国酒泉卫星发射中心  
+核心内容：中国成功发射新一代载人飞船“神舟二十号”，搭载3名航天员前往中国空间站，执行为期6个月的科学实验任务。此次任务标志着中国载人航天工程进入新阶段，为未来深空探测奠定基础。
+
+2. 美国与欧盟达成人工智能监管协议  
+时间：2025年03月17日 15:00  
+地点：比利时布鲁塞尔  
+核心内容：美国与欧盟宣布达成全球首个人工智能监管框架协议，旨在规范AI技术的开发与应用，确保其符合伦理和安全标准。该协议将为全球AI治理提供重要参考。
+
+3. 日本福岛核电站废水排放引发国际争议  
+时间：2025年03月17日 18:00  
+地点：日本福岛  
+核心内容：日本政府宣布启动福岛核电站处理后的废水排放入海计划，引发周边国家强烈反对。中国、韩国等邻国呼吁国际社会介入，确保排放过程透明且符合环保标准。
+
+4. 非洲联盟峰会聚焦气候变化与粮食安全  
+时间：2025年03月18日 09:00  
+地点：埃塞俄比亚亚的斯亚贝巴  
+核心内容：非洲联盟召开特别峰会，讨论气候变化对粮食安全的影响。与会国家承诺加强合作，推动农业技术创新，以应对日益严峻的粮食危机。
+
+5. 俄罗斯与乌克兰达成临时停火协议  
+时间：2025年03月18日 06:00  
+地点：乌克兰基辅  
+核心内容：在联合国斡旋下，俄罗斯与乌克兰达成为期30天的临时停火协议，双方同意在人道主义走廊内交换战俘并提供紧急援助。国际社会对此表示欢迎，并呼吁通过对话解决冲突。
+
+正能量评论  
+在全球面临挑战的时刻，人类展现出的合作与创新精神让我们相信，未来充满希望与可能。让我们携手共进，为更美好的明天努力！
+
+🕰️ 历史回顾
+以下是关于3月18日的“历史上的今天”内容：
+
+1. 1965年 苏联宇航员阿列克谢·列昂诺夫完成人类首次太空行走  
+   事件描述：阿列克谢·列昂诺夫在“上升2号”任务中离开飞船，进行了12分钟的太空行走，成为历史上第一位在太空中自由漂浮的人类。  
+   历史影响：这一壮举标志着人类探索太空的重要里程碑，为后续的太空任务奠定了基础，并推动了国际航天技术的发展。
+
+2. 1871年 巴黎公社成立  
+   事件描述：在普法战争失败后，巴黎市民起义并建立了巴黎公社，这是世界上第一个无产阶级政权。  
+   历史影响：巴黎公社虽然仅存在了72天，但它对国际工人运动和社会主义思想产生了深远影响，成为后来许多革命运动的灵感来源。
+
+3. 1937年 美国德克萨斯州新伦敦学校爆炸事件  
+   事件描述：由于天然气泄漏，德克萨斯州新伦敦的一所学校发生爆炸，导致近300人死亡，其中大部分是儿童。  
+   历史影响：这一悲剧促使美国加强了对天然气使用的安全监管，并推动了建筑安全标准的改进，成为美国历史上最严重的学校灾难之一。
+
+这些事件展示了3月18日在不同历史时期的重要性和多样性。
+2025-03-18 13:43:52.144 [main] ERROR com.dailybot.task.DailyNewsTask - Task execution failed
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://127.0.0.1:5800/send_group_msg": Connection refused: connect
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:800)
+	at org.springframework.web.client.RestTemplate.postForEntity(RestTemplate.java:548)
+	at com.dailybot.service.QqBotService.sendGroupMessage(QqBotService.java:32)
+	at com.dailybot.task.DailyNewsTask.execute(DailyNewsTask.java:37)
+	at com.dailybot.DailyBotApplication.main(DailyBotApplication.java:15)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at java.base/java.net.Socket.connect(Socket.java:583)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:183)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:498)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:351)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:373)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1309)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1242)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1128)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1057)
+	at org.springframework.http.client.SimpleClientHttpRequest.executeInternal(SimpleClientHttpRequest.java:79)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
+	... 5 common frames omitted
+2025-03-18 14:13:24.166 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server stop.
+2025-03-18 14:13:24.268 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2025-03-18 14:13:24.268 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destory.
+2025-03-18 14:13:24.268 [SpringApplicationShutdownHook] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server destroy success.
+2025-03-18 14:13:24.269 [xxl-job, executor TriggerCallbackThread] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor callback thread destory.
+2025-03-18 14:13:24.269 [Thread-2] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor retry callback thread destory.
+2025-03-18 14:13:26.888 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 12812 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-18 14:13:26.889 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-18 14:13:26.890 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-18 14:13:27.648 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2025-03-18 14:13:27.650 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-18 14:13:27.651 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-18 14:13:27.706 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-18 14:13:27.939 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@486bd064[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-18 14:13:27.977 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2025-03-18 14:13:28.003 [main] INFO  com.dailybot.DailyBotApplication - Started DailyBotApplication in 1.472 seconds (process running for 2.118)
+2025-03-18 14:13:28.005 [main] INFO  com.dailybot.task.DailyNewsTask - Starting dailyNewsJobHandler execution
+2025-03-18 14:13:28.440 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2025-03-18 14:14:21.633 [main] INFO  com.dailybot.task.DailyNewsTask - Generated final content: 🗞️ 每日晨报
+2025年03月17日 08:00 至 2025年03月18日 08:00 新闻摘要
+
+1. 中国成功发射新一代载人飞船
+   时间: 2025年03月17日 10:30
+   地点: 中国酒泉卫星发射中心
+   核心内容: 中国成功发射新一代载人飞船“神舟十六号”，搭载三名航天员前往中国空间站，执行为期六个月的太空任务。此次任务标志着中国载人航天工程进入新阶段。
+
+2. 美国与欧盟达成新一轮贸易协议
+   时间: 2025年03月17日 14:00
+   地点: 比利时布鲁塞尔
+   核心内容: 美国与欧盟宣布达成新一轮贸易协议，旨在减少关税壁垒、促进绿色技术合作，并加强数字经济领域的合作。该协议预计将为双方带来数千亿美元的经济增长。
+
+3. 日本福岛核电站废水排放引发国际争议
+   时间: 2025年03月17日 16:45
+   地点: 日本福岛
+   核心内容: 日本政府宣布启动福岛核电站处理后的废水排放计划，引发周边国家及国际环保组织的强烈反对。中国、韩国等邻国表示将采取进一步措施应对潜在的环境风险。
+
+4. 印度尼西亚火山爆发致数千人撤离
+   时间: 2025年03月17日 19:20
+   地点: 印度尼西亚爪哇岛
+   核心内容: 印度尼西亚默拉皮火山爆发，喷出大量火山灰和熔岩，导致周边数千居民紧急撤离。当地政府已启动应急响应机制，暂无人员伤亡报告。
+
+5. 全球首例人工智能辅助心脏手术成功
+   时间: 2025年03月18日 06:00
+   地点: 美国波士顿
+   核心内容: 全球首例由人工智能辅助完成的心脏手术在美国波士顿成功实施。手术全程由AI系统实时监控并提供决策支持，标志着医疗技术与人工智能融合的重大突破。
+
+正能量评论
+在科技与合作的推动下，人类正不断突破自我，迈向更加美好的未来。无论面对挑战还是机遇，团结与创新始终是我们前行的动力！
+
+🕰️ 历史回顾
+历史上的今天（03月18日）
+
+1. 1965年 苏联宇航员阿列克谢·列昂诺夫完成人类首次太空行走  
+   事件描述：苏联宇航员阿列克谢·列昂诺夫在“上升2号”任务中，成功进行了人类历史上首次太空行走，持续了约12分钟。  
+   历史影响：这一壮举标志着人类在太空探索领域迈出了重要一步，为后续的太空任务奠定了基础，并推动了国际空间技术的发展。
+
+2. 1871年 巴黎公社成立  
+   事件描述：在法国巴黎，工人阶级和革命者宣布成立巴黎公社，这是历史上第一个无产阶级政权。  
+   历史影响：巴黎公社虽然仅存在了72天，但它对后来的社会主义运动和工人运动产生了深远影响，成为无产阶级革命的象征。
+
+3. 1937年 美国德克萨斯州新伦敦学校爆炸事件  
+   事件描述：德克萨斯州新伦敦的一所学校发生天然气爆炸，导致近300名学生和教师死亡，成为美国历史上最严重的学校灾难之一。  
+   历史影响：这一悲剧促使美国加强了对天然气使用的安全监管，推动了相关法律法规的制定，以防止类似事件再次发生。
+2025-03-18 14:14:21.640 [main] ERROR com.dailybot.task.DailyNewsTask - Task execution failed
+org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request on POST request for "http://127.0.0.1:5800/send_group_msg": [no body]
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:103)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:186)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:147)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:952)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:901)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:800)
+	at org.springframework.web.client.RestTemplate.postForEntity(RestTemplate.java:548)
+	at com.dailybot.service.QqBotService.sendGroupMessage(QqBotService.java:32)
+	at com.dailybot.task.DailyNewsTask.execute(DailyNewsTask.java:37)
+	at com.dailybot.DailyBotApplication.main(DailyBotApplication.java:15)
+2025-03-18 14:15:39.285 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server stop.
+2025-03-18 14:15:39.322 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2025-03-18 14:15:39.322 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destory.
+2025-03-18 14:15:39.322 [SpringApplicationShutdownHook] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server destroy success.
+2025-03-18 14:15:39.322 [xxl-job, executor TriggerCallbackThread] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor callback thread destory.
+2025-03-18 14:15:39.322 [Thread-2] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor retry callback thread destory.
+2025-03-18 14:15:43.655 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 27988 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-18 14:15:43.655 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-18 14:15:43.657 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-18 14:15:44.297 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2025-03-18 14:15:44.299 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-18 14:15:44.299 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-18 14:15:44.376 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-18 14:15:44.597 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@3f6cce7f[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-18 14:15:44.627 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2025-03-18 14:15:44.648 [main] INFO  com.dailybot.DailyBotApplication - Started DailyBotApplication in 1.328 seconds (process running for 1.934)
+2025-03-18 14:15:44.652 [main] INFO  com.dailybot.task.DailyNewsTask - Starting dailyNewsJobHandler execution
+2025-03-18 14:15:45.073 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2025-03-18 14:16:55.533 [main] INFO  com.dailybot.task.DailyNewsTask - Generated final content: 🗞️ 每日晨报
+以下是2025年3月17日08:00至2025年3月18日08:00的新闻摘要：
+
+--1. 中国成功发射新一代载人飞船  
+时间：2025年3月17日 10:30  
+地点：中国酒泉卫星发射中心  
+核心内容：中国成功发射新一代载人飞船“神舟十八号”，搭载三名航天员前往中国空间站，执行为期6个月的科学实验任务。此次任务标志着中国载人航天工程进入新阶段，为未来深空探测奠定基础。
+
+--2. 美国与欧盟达成人工智能监管协议  
+时间：2025年3月17日 15:00  
+地点：比利时布鲁塞尔  
+核心内容：美国与欧盟宣布达成一项全球首个人工智能监管框架协议，旨在规范AI技术的开发与应用，确保其符合伦理和安全标准。该协议被视为全球科技治理的重要里程碑。
+
+--3. 印度尼西亚火山喷发致数千人撤离  
+时间：2025年3月17日 18:00  
+地点：印度尼西亚爪哇岛  
+核心内容：印尼默拉皮火山发生大规模喷发，火山灰柱高达10公里，周边数千居民紧急撤离。印尼政府已启动应急响应机制，暂无人员伤亡报告，但火山活动仍在持续监测中。
+
+--4. 全球首条跨洲际量子通信网络建成  
+时间：2025年3月18日 06:00  
+地点：中国北京、欧洲日内瓦  
+核心内容：中国与欧洲科学家合作建成全球首条跨洲际量子通信网络，实现了北京与日内瓦之间的量子密钥分发。这一突破将极大提升全球通信安全水平，推动量子技术的商业化应用。
+
+--5. 联合国气候大会通过“2030碳中和行动计划”  
+时间：2025年3月17日 20:00  
+地点：德国柏林  
+核心内容：联合国气候大会通过“2030碳中和行动计划”，要求各国在2030年前将碳排放量减少50%。该计划获得195个国家支持，被视为应对气候变化的关键一步。
+
+--正能量评论：在全球共同努力下，科技与环保领域的突破为人类未来描绘了更加光明的图景，让我们携手共进，创造更美好的明天！
+
+🕰️ 历史回顾
+历史上的今天（03月18日）
+
+1. 1965年 苏联宇航员阿列克谢·列昂诺夫完成人类首次太空行走  
+   事件描述：阿列克谢·列昂诺夫在“上升2号”任务中，成功进行了人类历史上第一次太空行走，持续了约12分钟。  
+   历史影响：这一壮举标志着人类探索太空的重要里程碑，为后续的太空任务奠定了基础，并推动了国际空间合作的发展。
+
+2. 1871年 巴黎公社成立  
+   事件描述：在法国巴黎，工人阶级和革命者推翻了资产阶级政府，成立了巴黎公社，这是历史上第一个无产阶级政权。  
+   历史影响：巴黎公社虽然仅存在了72天，但它对后来的社会主义运动和工人斗争产生了深远影响，成为马克思主义理论的重要实践案例。
+
+3. 1922年 印度圣雄甘地被判入狱6年  
+   事件描述：甘地因领导非暴力不合作运动反对英国殖民统治，被英国殖民当局判处6年监禁。  
+   历史影响：甘地的非暴力抵抗理念和行动激励了全球范围内的反殖民斗争，最终推动了印度独立，并对世界和平运动产生了深远影响。
+
+这些事件展示了人类在探索、革命和争取自由方面的不懈努力，深刻影响了历史的进程。
+2025-03-18 14:16:55.540 [main] ERROR com.dailybot.task.DailyNewsTask - Task execution failed
+org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request on POST request for "http://127.0.0.1:5800/send_group_msg": [no body]
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:103)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:186)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:147)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:952)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:901)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:800)
+	at org.springframework.web.client.RestTemplate.postForEntity(RestTemplate.java:548)
+	at com.dailybot.service.QqBotService.sendGroupMessage(QqBotService.java:32)
+	at com.dailybot.task.DailyNewsTask.execute(DailyNewsTask.java:37)
+	at com.dailybot.DailyBotApplication.main(DailyBotApplication.java:15)
+2025-03-18 14:20:32.016 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server stop.
+2025-03-18 14:20:32.059 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.1.211:9999/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2025-03-18 14:20:32.059 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destory.
+2025-03-18 14:20:32.061 [SpringApplicationShutdownHook] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server destroy success.
+2025-03-18 14:20:32.061 [xxl-job, executor TriggerCallbackThread] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor callback thread destory.
+2025-03-18 14:20:32.061 [Thread-2] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor retry callback thread destory.
+2025-03-18 14:20:36.141 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 14380 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-18 14:20:36.142 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-18 14:20:36.142 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-18 14:20:36.748 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2025-03-18 14:20:36.748 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-18 14:20:36.750 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-18 14:20:36.789 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-18 14:20:37.021 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@7b9088f2[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-18 14:20:37.049 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2025-03-18 14:20:37.073 [main] INFO  com.dailybot.DailyBotApplication - Started DailyBotApplication in 1.26 seconds (process running for 1.825)
+2025-03-18 14:20:37.077 [main] INFO  com.dailybot.task.DailyNewsTask - Starting dailyNewsJobHandler execution
+2025-03-18 14:20:37.492 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2025-03-18 14:21:38.912 [main] INFO  com.dailybot.task.DailyNewsTask - Generated final content: 🗞️ 每日晨报
+2025年3月17日-18日新闻摘要
+
+1. 中国成功发射新一代载人飞船
+时间：2025年3月17日 10:30  
+地点：中国酒泉卫星发射中心  
+核心内容：中国成功发射新一代载人飞船“神舟XX号”，搭载3名航天员前往中国空间站，执行为期6个月的科学实验任务。此次发射标志着中国载人航天工程进入新阶段，为未来深空探测奠定基础。
+
+2. 美国与欧盟达成新一轮贸易协议
+时间：2025年3月17日 15:00  
+地点：比利时布鲁塞尔  
+核心内容：美国与欧盟宣布达成新一轮贸易协议，重点聚焦绿色能源技术合作与数字贸易规则。协议旨在减少双方贸易壁垒，促进经济复苏，同时应对气候变化挑战。
+
+3. 日本福岛核电站废水排放引发国际争议
+时间：2025年3月17日 18:00  
+地点：日本东京  
+核心内容：日本政府宣布将于下月启动福岛核电站处理后的废水排放计划，引发周边国家强烈反对。中国、韩国等邻国呼吁国际社会介入，确保排放过程透明且符合国际安全标准。
+
+4. 非洲联盟峰会聚焦粮食安全与气候变化
+时间：2025年3月18日 09:00  
+地点：埃塞俄比亚亚的斯亚贝巴  
+核心内容：非洲联盟召开特别峰会，讨论粮食安全与气候变化应对策略。多国领导人呼吁加强国际合作，推动农业技术创新，以应对日益严重的干旱和粮食短缺问题。
+
+5. 全球股市因AI技术突破大幅上涨
+时间：2025年3月17日 20:00  
+地点：全球  
+核心内容：全球主要股市因人工智能领域重大技术突破大幅上涨，科技股领涨。专家预测，AI技术的广泛应用将推动全球经济进入新一轮增长周期。
+
+正能量评论
+科技与合作的进步正在为人类创造更美好的未来，让我们携手共进，迎接挑战，拥抱希望！
+
+🕰️ 历史回顾
+以下是历史上3月18日发生的三个重要事件：
+
+1. 1871年 巴黎公社成立  
+   事件描述：1871年3月18日，法国巴黎的工人阶级和市民起义，推翻了资产阶级政府，成立了巴黎公社。这是历史上第一个由工人阶级主导的政权。  
+   历史影响：巴黎公社虽然仅存在了72天，但它对国际工人运动和社会主义思想产生了深远影响，成为无产阶级革命的象征。马克思在《法兰西内战》中对巴黎公社进行了高度评价。
+
+2. 1965年 苏联宇航员阿列克谢·列昂诺夫完成人类首次太空行走  
+   事件描述：1965年3月18日，苏联宇航员阿列克谢·列昂诺夫在“上升2号”任务中完成了人类历史上首次太空行走，他在舱外停留了12分钟。  
+   历史影响：这一壮举标志着人类在太空探索领域迈出了重要一步，为后续的太空任务和国际空间站的建设奠定了基础，同时也加剧了美苏之间的太空竞赛。
+
+3. 1990年 东德举行首次自由选举  
+   事件描述：1990年3月18日，东德（德意志民主共和国）举行了首次自由选举，这是东德政治改革的重要一步。选举结果显示了民众对德国统一的强烈愿望。  
+   历史影响：这次选举加速了东德与西德的统一进程，最终在1990年10月3日实现了两德统一。这一事件标志着冷战的结束和欧洲政治格局的重大变化。
+
+这些事件在各自的历史时期产生了深远的影响，塑造了世界历史的进程。
+2025-03-18 14:21:39.648 [main] INFO  com.dailybot.task.DailyNewsTask - Message sent to group 1034311904
+2025-03-18 14:24:07.244 [main] INFO  com.dailybot.DailyBotApplication - Starting DailyBotApplication using Java 17.0.3.1 with PID 12224 (D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot\target\classes started by 李叶天666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-18 14:24:07.244 [main] DEBUG com.dailybot.DailyBotApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-18 14:24:07.246 [main] INFO  com.dailybot.DailyBotApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-18 14:24:07.922 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8100"]
+2025-03-18 14:24:07.923 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-18 14:24:07.924 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-18 14:24:07.972 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-18 14:24:08.198 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@5d7dd549[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-18 14:24:08.230 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8100"]
+2025-03-18 14:24:08.259 [main] INFO  com.dailybot.DailyBotApplication - Started DailyBotApplication in 1.359 seconds (process running for 1.982)
+2025-03-18 14:24:08.261 [main] INFO  com.dailybot.task.DailyNewsTask - Starting dailyNewsJobHandler execution
+2025-03-18 14:24:08.677 [Thread-3] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2025-03-18 14:25:14.034 [main] INFO  com.dailybot.task.DailyNewsTask - Generated plain text content: 🗞️ 每日晨报
+今日新闻摘要 (2025年03月17日 08:00 2025年03月18日 08:00)
+
+1. 中国成功发射新一代载人飞船
+   时间: 2025年03月17日 10:30  
+   地点: 中国酒泉卫星发射中心  
+   核心内容: 中国成功发射了新一代载人飞船“神舟XX号”，搭载三名航天员前往中国空间站。此次任务标志着中国载人航天工程进入新阶段，未来将开展更复杂的空间科学实验和技术验证。
+
+2. 美国与欧盟达成新一轮贸易协议
+   时间: 2025年03月17日 14:00  
+   地点: 比利时布鲁塞尔  
+   核心内容: 美国与欧盟宣布达成一项新的贸易协议，旨在减少关税壁垒并加强在绿色能源和数字经济领域的合作。该协议预计将为双方带来数千亿美元的经济增长。
+
+3. 印度尼西亚发生7.2级地震
+   时间: 2025年03月17日 18:45  
+   地点: 印度尼西亚苏门答腊岛  
+   核心内容: 印度尼西亚苏门答腊岛附近发生7.2级地震，目前已造成至少200人死亡，数千人受伤。当地政府已启动紧急救援行动，国际社会纷纷提供援助。
+
+4. 俄罗斯宣布完成北极军事基地扩建
+   时间: 2025年03月18日 06:00  
+   地点: 俄罗斯北极地区  
+   核心内容: 俄罗斯国防部宣布完成北极军事基地的扩建工程，新增了先进的雷达系统和导弹防御设施。此举被视为俄罗斯加强北极战略部署的重要一步。
+
+5. 全球首例AI辅助心脏移植手术成功
+   时间: 2025年03月17日 20:15  
+   地点: 日本东京大学医院  
+   核心内容: 日本东京大学医院成功完成全球首例AI辅助心脏移植手术。AI系统在手术中实时分析患者数据，协助医生精准操作，标志着医疗技术与人工智能结合的新里程碑。
+
+--正能量评论: 无论是科技的突破还是国际合作的深化，人类正以智慧和团结的力量不断迈向更美好的未来。让我们继续携手前行，共同应对挑战，创造更多奇迹！
+
+🕰️ 历史回顾
+以下是历史上3月18日发生的三个重要事件：
+
+1. 1965年 苏联宇航员阿列克谢·列昂诺夫完成人类首次太空行走  
+   事件描述：苏联宇航员阿列克谢·列昂诺夫在“上升2号”任务中，成功完成了人类历史上首次太空行走，他在舱外停留了12分钟。  
+   历史影响：这一壮举标志着人类探索太空的重要里程碑，为后续的太空任务奠定了基础，并推动了国际空间技术的发展。
+
+2. 1871年 巴黎公社成立  
+   事件描述：法国工人阶级在巴黎发动起义，推翻了资产阶级政府，成立了世界上第一个无产阶级政权——巴黎公社。  
+   历史影响：巴黎公社虽然仅存在了72天，但它对国际工人运动和社会主义思想的发展产生了深远影响，成为马克思主义理论的重要实践案例。
+
+3. 1937年 美国德克萨斯州新伦敦学校爆炸事件  
+   事件描述：德克萨斯州新伦敦的一所学校因天然气泄漏引发爆炸，导致近300名学生和教师丧生，成为美国历史上最严重的学校灾难之一。  
+   历史影响：这一悲剧促使美国加强了对公共建筑安全标准的监管，特别是在天然气使用和建筑安全方面，推动了相关法律法规的完善。
+
+这些事件在各自领域对历史产生了深远的影响，展现了人类在探索、抗争和进步中的努力与牺牲。
+2025-03-18 14:25:14.706 [main] INFO  com.dailybot.task.DailyNewsTask - Message sent to group 1034311904
+2025-03-18 14:54:50.683 [main] INFO  c.dailybot.DailyBotApplicationTests - Starting DailyBotApplicationTests using Java 17.0.3.1 with PID 38312 (started by ��Ҷ��666 in D:\bangong\Maven\repository\com\github\binarywang\wx-java-miniapp-spring-boot-starter\daily-bot)
+2025-03-18 14:54:50.686 [main] DEBUG c.dailybot.DailyBotApplicationTests - Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-03-18 14:54:50.686 [main] INFO  c.dailybot.DailyBotApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-03-18 14:54:52.076 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:dailyNewsJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@22cb3d59[class com.dailybot.task.DailyNewsTask#execute]
+2025-03-18 14:54:52.237 [main] INFO  c.dailybot.DailyBotApplicationTests - Started DailyBotApplicationTests in 1.882 seconds (process running for 2.702)
+2025-03-18 14:54:52.749 [Thread-4] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9999
+2025-03-18 14:54:52.963 [Thread-4] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server stop.
+2025-03-18 14:54:53.002 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='daily-bot', registryValue='http://192.168.8.1:9999/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2025-03-18 14:54:53.003 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destroy.
+2025-03-18 14:54:53.004 [SpringApplicationShutdownHook] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server destroy success.
+2025-03-18 14:54:53.004 [xxl-job, executor TriggerCallbackThread] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor callback thread destroy.
+2025-03-18 14:54:53.004 [Thread-3] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor retry callback thread destroy.
